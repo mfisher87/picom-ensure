@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -e
+
+CONFIG='/etc/regolith/picom/config'
+
+picom_is_running=$(inxi -Gxx | grep "compositor: picom" | wc -l)
+if [ $picom_is_running = 1 ]; then
+    echo "picom is running.";
+    exit 0
+fi
+
+picom --config $CONFIG &
+PID=$!
+
+echo "picom started (pid: $PID)."
+exit 0

@@ -19,5 +19,5 @@ system.
 Requires `inxi`. Install it with your operating system's package manager.
 
 ```
-ln -s $PWD/picom-ensure /usr/local/bin/picom-ensure
+sudo ln -s $PWD/picom-ensure /usr/local/bin/picom-ensure
 ```

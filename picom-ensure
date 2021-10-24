@@ -9,7 +9,7 @@ if [ $picom_is_running = 1 ]; then
     exit 0
 fi
 
-picom --config $CONFIG &
+picom -b --config $CONFIG &
 PID=$!
 
 echo "picom started (pid: $PID)."

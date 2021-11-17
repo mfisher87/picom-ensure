@@ -3,7 +3,7 @@ set -e
 
 CONFIG='/etc/regolith/picom/config'
 
-picom_is_running=$(inxi -Gxx | grep "compositor: picom" | wc -l)
+picom_is_running=$(inxi -Gxx | grep "compositor..picom" | wc -l)
 if [ $picom_is_running = 1 ]; then
     echo "picom is running.";
     exit 0
